@@ -119,17 +119,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Navbar mobile toggle
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.querySelector('.nav-menu');
-    if (navToggle && navMenu) {
+    const navOverlay = document.getElementById('navOverlay');
+    if (navToggle && navMenu && navOverlay) {
+        function closeMenu() {
+            navToggle.classList.remove('open');
+            navMenu.classList.remove('open');
+            navOverlay.classList.remove('active');
+        }
         navToggle.addEventListener('click', function() {
+            const isOpen = navMenu.classList.toggle('open');
             navToggle.classList.toggle('open');
-            navMenu.classList.toggle('open');
+            navOverlay.classList.toggle('active', isOpen);
         });
+        navOverlay.addEventListener('click', closeMenu);
         // Chiudi menu al click su link
         navMenu.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function() {
-                navToggle.classList.remove('open');
-                navMenu.classList.remove('open');
-            });
+            link.addEventListener('click', closeMenu);
         });
     }
 });
