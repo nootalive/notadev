@@ -233,6 +233,79 @@ a {
     transform: rotate(180deg);
 }
 
+/* ======= NAVBAR RESPONSIVE ======= */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+  margin-left: 16px;
+}
+.nav-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin: 4px 0;
+  background: var(--color-white);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 80vw;
+    max-width: 340px;
+    height: 100vh;
+    background: var(--color-dark-alt);
+    box-shadow: -8px 0 32px rgba(0,0,0,0.18);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 32px 32px 32px;
+    gap: 24px;
+    transition: right 0.4s cubic-bezier(.77,0,.18,1);
+    z-index: 1050;
+  }
+  .nav-menu.open {
+    right: 0;
+  }
+  .nav-link {
+    font-size: 20px;
+    padding: 16px 0;
+    width: 100%;
+    border-radius: 0;
+    color: var(--color-white);
+    justify-content: flex-start;
+  }
+  .navbar {
+    padding: 16px 0;
+  }
+  .nav-container {
+    padding: 0 16px;
+  }
+}
+
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 
 /* ==========================================
    HERO SECTION
@@ -1056,6 +1129,10 @@ a {
     }
 }
 
+@media (max-width: 900px) {
+    .floating-icon { display: none; }
+}
+
 @media (max-width: 768px) {
     .nav-container {
         padding: 0 20px;
@@ -1130,39 +1207,4 @@ a {
     .contact-cta-wrapper {
         padding: 30px 20px;
     }
-}
-
-/* ==========================================
-   FLOATING ICONS
-   ========================================== */
-
-.floating-icon {
-    position: fixed;
-    z-index: 9999;
-    opacity: 0.7;
-    pointer-events: none;
-    transition: opacity 0.3s;
-}
-
-.floating-html {
-    top: 18px;
-    left: 18px;
-}
-
-.floating-css {
-    bottom: 18px;
-    left: 18px;
-}
-
-.floating-js {
-    bottom: 18px;
-    right: 18px;
-}
-
-.floating-icon svg {
-    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.12));
-}
-
-@media (max-width: 900px) {
-    .floating-icon { display: none; }
 }

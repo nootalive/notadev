@@ -115,6 +115,23 @@ document.addEventListener('DOMContentLoaded', function() {
             hero.style.transform = `translateY(${scrolled * 0.3}px)`;
         }
     });
+    
+    // Navbar mobile toggle
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.querySelector('.nav-menu');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            navToggle.classList.toggle('open');
+            navMenu.classList.toggle('open');
+        });
+        // Chiudi menu al click su link
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                navToggle.classList.remove('open');
+                navMenu.classList.remove('open');
+            });
+        });
+    }
 });
 
 // Copy email to clipboard function
