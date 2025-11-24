@@ -258,42 +258,59 @@ a {
 }
 
 @media (max-width: 900px) {
-  .nav-toggle {
-    display: flex;
-  }
-  .nav-menu {
-    position: fixed;
-    top: 0;
-    right: -100vw;
-    width: 80vw;
-    max-width: 340px;
-    height: 100vh;
-    background: var(--color-dark-alt);
-    box-shadow: -8px 0 32px rgba(0,0,0,0.18);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 100px 32px 32px 32px;
-    gap: 24px;
-    transition: right 0.4s cubic-bezier(.77,0,.18,1);
-    z-index: 1050;
-  }
-  .nav-menu.open {
-    right: 0;
-  }
-  .nav-link {
-    font-size: 20px;
-    padding: 16px 0;
-    width: 100%;
-    border-radius: 0;
-    color: var(--color-white);
-    justify-content: flex-start;
-  }
-  .navbar {
-    padding: 16px 0;
-  }
-  .nav-container {
-    padding: 0 16px;
-  }
+    .nav-toggle {
+        display: flex;
+    }
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        width: 80vw;
+        max-width: 340px;
+        height: 100vh;
+        background: var(--color-dark-alt);
+        box-shadow: -8px 0 32px rgba(0,0,0,0.18);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 120px 32px 32px 32px;
+        gap: 24px;
+        transition: right 0.4s cubic-bezier(.77,0,.18,1);
+        z-index: 1200;
+        overflow-y: auto;
+    }
+    .nav-menu.open {
+        right: 0;
+        box-shadow: -8px 0 32px rgba(0,0,0,0.28);
+    }
+    .nav-menu.open::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.5);
+        z-index: 1199;
+        pointer-events: auto;
+    }
+    .nav-link {
+        font-size: 20px;
+        padding: 16px 0;
+        width: 100%;
+        border-radius: 0;
+        color: var(--color-white);
+        justify-content: flex-start;
+        background: none;
+        text-align: left;
+        z-index: 1201;
+    }
+    .navbar {
+        padding: 16px 0;
+        z-index: 1300;
+    }
+    .nav-container {
+        padding: 0 16px;
+    }
 }
 
 .nav-toggle.open span:nth-child(1) {
