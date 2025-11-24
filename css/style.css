@@ -301,17 +301,7 @@ a {
         right: 0;
         box-shadow: -8px 0 32px rgba(0,0,0,0.28);
     }
-    .nav-menu.open::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0,0,0,0.5);
-        z-index: 1199;
-        pointer-events: auto;
-    }
+    /* Rimosso overlay ::before, ora gestito da .nav-overlay */
     .nav-link {
         font-size: 20px;
         padding: 16px 0;
