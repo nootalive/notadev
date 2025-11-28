@@ -18,7 +18,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
 
 html {
     scroll-behavior: smooth;
@@ -699,6 +698,21 @@ a {
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.4s ease;
     position: relative;
+}
+
+/* Centra il logo di MineClub nella sua card, margine e dimensione corretti */
+.project-card .project-image img[alt="MineClub Minecraft Server"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 0;
+    max-width: 260px;
+    max-height: 220px;
+    height: auto;
+    object-fit: contain;
+    transform: rotate(0deg) scale(1.12);
+}
 }
 
 .project-card:hover {
