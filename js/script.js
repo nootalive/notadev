@@ -58,6 +58,47 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ==========================================
+    // Language Selector
+    // ==========================================
+    const langButtons = document.querySelectorAll('.lang-btn');
+    
+    langButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            langButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Get selected language
+            const selectedLang = this.getAttribute('data-lang');
+            
+            // Update HTML lang attribute
+            document.documentElement.setAttribute('lang', selectedLang);
+            
+            // Store preference in localStorage
+            localStorage.setItem('preferredLanguage', selectedLang);
+            
+            // TODO: Future implementation - load translations
+            console.log('Language changed to:', selectedLang);
+            
+            // Optional: Show a subtle notification
+            // showLanguageChangeNotification(selectedLang);
+        });
+    });
+    
+    // Load saved language preference on page load
+    const savedLang = localStorage.getItem('preferredLanguage');
+    if (savedLang) {
+        const savedButton = document.querySelector(`.lang-btn[data-lang="${savedLang}"]`);
+        if (savedButton) {
+            langButtons.forEach(btn => btn.classList.remove('active'));
+            savedButton.classList.add('active');
+            document.documentElement.setAttribute('lang', savedLang);
+        }
+    }
+    
+    // ==========================================
     // Smooth Scroll for Navigation Links
     // ==========================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
