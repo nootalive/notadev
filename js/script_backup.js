@@ -1,58 +1,35 @@
 // ==========================================
-// DARK PORTFOLIO - JavaScript
-// Mobile menu + Smooth interactions
+// MODERN PORTFOLIO - JavaScript
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', function() {
     
     // ==========================================
-    // Mobile Menu Toggle
+    // Mobile Navigation Toggle
     // ==========================================
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav-link');
     
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
+    if (navToggle) {
+        navToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
             this.classList.toggle('active');
-            
-            // Animate hamburger
-            const spans = this.querySelectorAll('span');
-            if (this.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translateY(8px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translateY(-8px)';
-            } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            }
         });
         
         // Close menu when clicking on a link
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
                 navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-                
-                const spans = menuToggle.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+                navToggle.classList.remove('active');
             });
         });
         
         // Close menu when clicking outside
         document.addEventListener('click', function(e) {
-            if (!menuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+            if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
                 navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-                
-                const spans = menuToggle.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+                navToggle.classList.remove('active');
             }
         });
     }
@@ -67,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.preventDefault();
                 const target = document.querySelector(href);
                 if (target) {
-                    const offsetTop = target.offsetTop - 80;
+                    const offsetTop = target.offsetTop - 80; // Account for fixed navbar
                     window.scrollTo({
                         top: offsetTop,
                         behavior: 'smooth'
@@ -76,23 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // ==========================================
-    // Header Background on Scroll
-    // ==========================================
-    const header = document.querySelector('.site-header');
-    
-    function handleHeaderScroll() {
-        if (window.scrollY > 50) {
-            header.style.background = 'rgba(10, 10, 15, 0.95)';
-            header.style.boxShadow = '0 4px 16px rgba(0, 0, 0, 0.3)';
-        } else {
-            header.style.background = 'rgba(10, 10, 15, 0.8)';
-            header.style.boxShadow = 'none';
-        }
-    }
-    
-    window.addEventListener('scroll', handleHeaderScroll);
     
     // ==========================================
     // Active Navigation Link on Scroll
@@ -109,15 +69,30 @@ document.addEventListener('DOMContentLoaded', function() {
             const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
             
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                navLinks.forEach(link => link.style.color = 'var(--color-text-secondary)');
+                navLinks.forEach(link => link.classList.remove('active'));
                 if (navLink) {
-                    navLink.style.color = 'var(--color-text-primary)';
+                    navLink.classList.add('active');
                 }
             }
         });
     }
     
     window.addEventListener('scroll', highlightNavigation);
+    
+    // ==========================================
+    // Navbar Background on Scroll
+    // ==========================================
+    const navbar = document.querySelector('.navbar');
+    
+    function handleNavbarScroll() {
+        if (window.scrollY > 50) {
+            navbar.style.boxShadow = '0 4px 6px -1px rgb(0 0 0 / 0.1)';
+        } else {
+            navbar.style.boxShadow = 'none';
+        }
+    }
+    
+    window.addEventListener('scroll', handleNavbarScroll);
     
     // ==========================================
     // Intersection Observer for Fade-in Animations
@@ -127,9 +102,9 @@ document.addEventListener('DOMContentLoaded', function() {
         rootMargin: '0px 0px -50px 0px'
     };
     
-    const fadeElements = document.querySelectorAll('.project-card, .stat-item, .contact-item');
+    const fadeInElements = document.querySelectorAll('.project-card, .stat-item, .contact-item');
     
-    const fadeObserver = new IntersectionObserver(function(entries) {
+    const fadeInObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '0';
@@ -141,40 +116,60 @@ document.addEventListener('DOMContentLoaded', function() {
                     entry.target.style.transform = 'translateY(0)';
                 }, 100);
                 
-                fadeObserver.unobserve(entry.target);
+                fadeInObserver.unobserve(entry.target);
             }
         });
     }, observerOptions);
     
-    fadeElements.forEach(element => {
-        fadeObserver.observe(element);
+    fadeInElements.forEach(element => {
+        fadeInObserver.observe(element);
     });
     
     // ==========================================
-    // Form Submission (Demo)
+    // Copy Email to Clipboard
     // ==========================================
-    const contactForm = document.querySelector('.contact-form');
+    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
     
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            
-            // Show success message
-            showNotification(`Grazie ${name}! Ti risponderò presto.`);
-            
-            // Reset form
-            this.reset();
+    emailLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (e.ctrlKey || e.metaKey) {
+                e.preventDefault();
+                const email = this.href.replace('mailto:', '');
+                copyToClipboard(email);
+            }
         });
+    });
+    
+    function copyToClipboard(text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(() => {
+                showNotification('Email copiata negli appunti!');
+            }).catch(err => {
+                console.error('Errore nella copia:', err);
+            });
+        } else {
+            // Fallback for older browsers
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showNotification('Email copiata negli appunti!');
+            } catch (err) {
+                console.error('Errore nella copia:', err);
+            }
+            document.body.removeChild(textarea);
+        }
     }
     
     // ==========================================
     // Show Notification
     // ==========================================
     function showNotification(message) {
+        // Remove existing notification if present
         const existingNotification = document.querySelector('.notification');
         if (existingNotification) {
             existingNotification.remove();
@@ -187,28 +182,26 @@ document.addEventListener('DOMContentLoaded', function() {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+            background: #0a0a0a;
             color: white;
             padding: 1rem 1.5rem;
             border-radius: 0.75rem;
-            box-shadow: 0 8px 32px rgba(139, 92, 246, 0.4);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.2);
             z-index: 10000;
             font-size: 0.938rem;
-            font-weight: 600;
-            animation: slideInUp 0.4s ease;
+            font-weight: 500;
+            animation: slideInUp 0.3s ease;
         `;
         
         document.body.appendChild(notification);
         
         setTimeout(() => {
-            notification.style.animation = 'slideOutDown 0.4s ease';
-            setTimeout(() => notification.remove(), 400);
+            notification.style.animation = 'slideOutDown 0.3s ease';
+            setTimeout(() => notification.remove(), 300);
         }, 3000);
     }
     
-    // ==========================================
-    // Add Animation Keyframes
-    // ==========================================
+    // Add animation keyframes
     const style = document.createElement('style');
     style.textContent = `
         @keyframes slideInUp {
@@ -232,6 +225,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 opacity: 0;
             }
         }
+        
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
     `;
     document.head.appendChild(style);
     
@@ -251,16 +256,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     const debouncedHighlight = debounce(highlightNavigation, 100);
-    const debouncedHeader = debounce(handleHeaderScroll, 100);
+    const debouncedNavbar = debounce(handleNavbarScroll, 100);
     
     window.removeEventListener('scroll', highlightNavigation);
-    window.removeEventListener('scroll', handleHeaderScroll);
+    window.removeEventListener('scroll', handleNavbarScroll);
     window.addEventListener('scroll', debouncedHighlight);
-    window.addEventListener('scroll', debouncedHeader);
+    window.addEventListener('scroll', debouncedNavbar);
     
-    // ==========================================
-    // Console Message
-    // ==========================================
-    console.log('%c🚀 Dark Portfolio Loaded', 'color: #8b5cf6; font-size: 16px; font-weight: bold;');
-    console.log('%cDeveloped by notadev', 'color: #ec4899; font-size: 12px;');
+    console.log('Portfolio loaded successfully! 🚀');
 });

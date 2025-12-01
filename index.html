@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -7,449 +6,650 @@
     <title>notadev — Web Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-                <div class="nav-container">
-                        <a href="#hero" class="nav-logo">
-                                <span class="logo-text">notadev</span><span class="logo-domain">.it</span>
-                        </a>
-                        <!-- Overlay per mobile menu -->
-                        <div class="nav-overlay" id="navOverlay"></div>
-                        <!-- Mobile Menu Button -->
-                        <button class="nav-toggle" id="navToggle" aria-label="Apri menu">
-                            <span></span><span></span><span></span>
-                        </button>
-                        <ul class="nav-menu">
-                <li><a href="#hero" class="nav-link active">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                    </svg>
-                    Home
-                </a></li>
-                <li><a href="#about" class="nav-link">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                    Chi Sono
-                </a></li>
-                <li><a href="#projects" class="nav-link">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                    </svg>
-                    Progetti
-                </a></li>
-                <li><a href="#contact" class="nav-link">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                    Contatti
-                </a></li>
-            </ul>
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <a href="#hero" class="logo">notadev</a>
+            <nav class="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#projects" class="nav-link">Progetti</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contatti</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <p class="hero-greeting">Ciao, sono</p>
-                <h1 class="hero-name">notadev</h1>
-                <p class="hero-title">Web Developer <span class="highlight">Junior</span></p>
-                
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                        </svg>
-                        I miei progetti
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        Contattami
-                    </a>
-                </div>
-            </div>
-            
-            <div class="hero-image">
-                <div class="image-wrapper">
-                    <img src="assets/img/immagine.3.jpg" alt="Workspace">
-                </div>
-            </div>
-        </div>
+    <!-- Main Content -->
+    <main>
         
-        <div class="scroll-indicator">
-            <span>Scorri</span>
-            <div class="scroll-arrow">↓</div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="section-container">
-            <div class="section-header">
-                <span class="section-label">Chi Sono</span>
-                <h2 class="section-title">Ma chi è notadev?</h2>
-            </div>
-            
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="assets/img/immagine-2.jpg" alt="About me">
+        <!-- Hero Section - EXTREME IMPACT -->
+        <section class="hero" id="hero">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span>Disponibile per progetti</span>
+                    </div>
+                    <h1 class="hero-title-mega">
+                        Design
+                        <span class="title-highlight">Digitale</span>
+                        <span class="title-gradient">Perfetto</span>
+                    </h1>
+                    <p class="hero-description-large">
+                        Sono <strong>notadev</strong>, sviluppatore web specializzato in creare 
+                        interfacce moderne che combinano estetica e funzionalità.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">2+</div>
+                            <div class="stat-text">Anni</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-text">Progetti</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-text">Successo</div>
+                        </div>
+                    </div>
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn-mega btn-gradient">
+                            <span>Esplora Progetti</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn-mega btn-outline-glow">
+                            <span>Contattami</span>
+                        </a>
+                    </div>
                 </div>
                 
-                <div class="about-text">
-                    <p>Sono una persona che lavora nel web in modo pratico
-                    </p>
-                    
-<p>Ho una passione per l’informatica da anni. Non è qualcosa che ho iniziato per caso: ci ho lavorato giorno dopo giorno, anche quando era complicato, anche quando sembrava troppo. Oggi quella fatica sta dando risultati e mi permette di offrire un servizio serio, stabile e fatto con criterio.</p>
-
-<p>Creo siti chiari, ordinati e facili da usare. Li penso per chi ha bisogno di qualcosa che funziona davvero, senza perdere tempo in cose inutili. Quando inizio un progetto ascolto il cliente, faccio domande dirette e mi concentro sui punti che contano per lui.</p>
-
-<p>Non riempio le pagine di elementi superflui. Non prometto cose che non servono. Il mio obiettivo è sempre lo stesso: trovare la soluzione più semplice, pulita e utile. Quella che risolve il problema senza complicarlo.</p>
-
-<p>Mi occupo sia della creazione che della gestione del sito. So organizzare i contenuti, strutturare la pagina e rendere la navigazione immediata. L’utente deve capire tutto al primo colpo, senza sforzo.</p>
-
-<p>Uso strumenti che conosco bene e tecniche affidabili. Preferisco un risultato solido e duraturo, invece di un effetto momentaneo. Voglio che chi mi affida un lavoro sappia sempre cosa sto facendo e perché lo sto facendo.</p>
-
-<p>In questo periodo ho lavorato molto e con continuità, migliorando ogni parte del processo: design, codice, gestione, comunicazione. È stato impegnativo, ma ha alzato la qualità del mio lavoro e oggi posso offrirla a chiunque ne ha bisogno.</p>
-
-<p>Sono disponibile a qualsiasi tipo di creazione e design: siti aziendali, landing page, portfolio, pagine informative, progetti più complessi. Se una persona ha un’esigenza concreta, posso trasformarla in qualcosa di chiaro e funzionante.</p>
-
-<p>Chi legge questo testo deve sentirsi tranquillo. Deve capire che non vendo fumo, non faccio promesse vaghe. Offro un servizio reale, pensato per chi vuole un sito che faccia il suo lavoro senza perdere tempo. E questo è ciò che guido in ogni mio progetto.</p>
-
-                    <div class="about-info">
-                        <div class="info-item">
-                            <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                            <span>Italia</span>
-                        </div>
-                        <div class="info-item">
-                            <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                <line x1="8" y1="21" x2="16" y2="21"></line>
-                                <line x1="12" y1="17" x2="12" y2="21"></line>
-                            </svg>
-                            <span>Web Developer</span>
-                        </div>
-                        <div class="info-item">
-                            <svg class="info-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                                <polyline points="21 15 16 10 5 21"></polyline>
-                            </svg>
-                            <span>UI/UX Designer</span>
-                        </div>
-                    </div>
-                    
-                    <a href="#contact" class="btn btn-primary">Parliamo del tuo progetto</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="section-container">
-            <div class="section-header center">
-                <span class="section-label">Portfolio</span>
-                <h2 class="section-title">I Miei Progetti</h2>
-            </div>
-            
-            <div class="projects-grid">
-                <!-- Project Card -->
-                <div class="project-card featured">
-                    <div class="project-image">
-                        <img src="assets/img/logo-kilo.jpeg" alt="casakilo">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">JAVASCRIPT</span>
-                        </div>
-                        <h3 class="project-title">casakilo</h3>
-                        <div class="project-badge">⭐ IN EVIDENZA</div>
-                        <p class="project-description">
-                            Piattaforma web moderna per casa vacanze. Design minimal con focus sulla semplicità ma con l'estetica allo stesso momento, sistema di prenotazione intuitivo e presentazione efficace degli spazi. Sviluppato con tecnologie moderne per garantire performance ottimali.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://casakilo.it" target="_blank" class="project-link">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                    <polyline points="15 3 21 3 21 9"></polyline>
-                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                <!-- Visual Element -->
+                <div class="hero-visual">
+                    <div class="visual-card card-1">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="card-icon-large">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
                                 </svg>
-                                Sito
-                            </a>
+                            </div>
+                            <h3>Clean Code</h3>
+                            <p>Codice pulito e manutenibile</p>
                         </div>
-                        <div class="project-meta">
-                            <span class="meta-item">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    </div>
+                    <div class="visual-card card-2">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="card-icon-large">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                                     <circle cx="8.5" cy="8.5" r="1.5"></circle>
                                     <polyline points="21 15 16 10 5 21"></polyline>
                                 </svg>
-                                UI/UX
+                            </div>
+                            <h3>UI/UX Design</h3>
+                            <p>Interfacce intuitive</p>
+                        </div>
+                    </div>
+                    <div class="visual-card card-3">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="card-icon-large">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                                </svg>
+                            </div>
+                            <h3>Performance</h3>
+                            <p>Velocità e ottimizzazione</p>
+                        </div>
+                    </div>
+                    <div class="hero-glow-orb"></div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- Projects Section - VARIED LAYOUTS -->
+        <section class="projects" id="projects">
+            <div class="container-fluid">
+                <div class="section-header-centered">
+                    <span class="section-label-large">Portfolio</span>
+                    <h2 class="section-title-extreme">Lavori<br><span class="title-gradient">Selezionati</span></h2>
+                    <p class="section-subtitle">Progetti che combinano design moderno e funzionalità eccellente</p>
+                </div>
+
+                <!-- FEATURED PROJECT - Full Width Split Screen -->
+                <article class="project-featured">
+                    <div class="featured-content">
+                        <div class="featured-badge-wrapper">
+                            <span class="featured-badge">
+                                <span class="badge-pulse"></span>
+                                Featured Project
                             </span>
-                            <span class="meta-item">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        </div>
+                        <h3 class="featured-title">Casa Kilo</h3>
+                        <p class="featured-subtitle">Piattaforma Prenotazione Vacanze</p>
+                        <p class="featured-description">
+                            Sito web completo per casa vacanze con sistema di prenotazione intuitivo, 
+                            galleria immagini dinamica e presentazione degli spazi. Design minimal 
+                            che mette in risalto la bellezza della location con un'esperienza utente fluida.
+                        </p>
+                        <div class="featured-tags">
+                            <span class="tag-premium">HTML5</span>
+                            <span class="tag-premium">CSS3</span>
+                            <span class="tag-premium">JavaScript</span>
+                            <span class="tag-premium">UI/UX</span>
+                            <span class="tag-premium">Responsive</span>
+                        </div>
+                        <div class="featured-metrics">
+                            <div class="metric">
+                                <div class="metric-value">100%</div>
+                                <div class="metric-label">Performance</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">Mobile</div>
+                                <div class="metric-label">First</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">SEO</div>
+                                <div class="metric-label">Optimized</div>
+                            </div>
+                        </div>
+                        <a href="https://casakilo.it" target="_blank" class="btn-featured">
+                            <span>Visita Progetto</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="featured-visual">
+                        <div class="featured-image-wrapper">
+                            <div class="image-glow"></div>
+                            <div class="image-placeholder">
+                                <img src="assets/img/logo-kilo.jpeg" alt="Casa Kilo">
+                            </div>
+                            <div class="image-border"></div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- REGULAR PROJECTS - Dashboard Grid -->
+                <div class="projects-grid-modern">
+
+                    
+                    <!-- Dashboard Style Cards -->
+                    <article class="project-card-premium">
+                        <div class="card-image-thumb">
+                            <img src="assets/img/voltmc.png" alt="VoltMC">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-header-premium">
+                            <div class="card-icon-glow">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                            </div>
+                            <span class="card-status">Active</span>
+                        </div>
+                        <div class="card-content-premium">
+                            <h3 class="card-title-bold">VoltMC</h3>
+                            <p class="card-desc-enhanced">
+                                Server Minecraft custom con community italiana attiva. Gestione completa 
+                                del web design e infrastruttura tecnica.
+                            </p>
+                            <div class="card-tech-stack">
+                                <span class="tech-item">HTML5</span>
+                                <span class="tech-item">CSS3</span>
+                                <span class="tech-item">JavaScript</span>
+                                <span class="tech-item">Minecraft</span>
+                            </div>
+                            <a href="https://voltmc.it" target="_blank" class="card-action-btn">
+                                <span>Esplora</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="card-glow-effect"></div>
+                    </article>
+
+                    <article class="project-card-premium">
+                        <div class="card-image-thumb">
+                            <img src="assets/img/MineClub.png" alt="MineClub">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-header-premium">
+                            <div class="card-icon-glow">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                                </svg>
+                            </div>
+                            <span class="card-status completed">Completed</span>
+                        </div>
+                        <div class="card-content-premium">
+                            <h3 class="card-title-bold">MineClub</h3>
+                            <p class="card-desc-enhanced">
+                                Ex Owner-Developer. Sviluppo completo e design del progetto che ha 
+                                raggiunto 500 giocatori simultanei.
+                            </p>
+                            <div class="card-tech-stack">
+                                <span class="tech-item">HTML5</span>
+                                <span class="tech-item">CSS3</span>
+                                <span class="tech-item">UI/UX</span>
+                                <span class="tech-item">Minecraft</span>
+                            </div>
+                            <a href="https://minecraft-italia.net/lista/server/mineclub" target="_blank" class="card-action-btn">
+                                <span>Dettagli</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="card-glow-effect"></div>
+                    </article>
+
+                </div>
+
+                <!-- Additional Projects - Compact Horizontal Layout -->
+                <div class="projects-compact-section">
+                    <h3 class="compact-title">Altri Progetti</h3>
+                    <div class="projects-compact-grid">
+                        
+                        <article class="project-compact">
+                            <div class="compact-number">01</div>
+                            <div class="compact-content">
+                                <h4>Portfolio Personale</h4>
+                                <p>Sito web showcase con design moderno</p>
+                            </div>
+                            <div class="compact-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                            </div>
+                            <a href="#" class="compact-arrow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </article>
+
+                        <article class="project-compact">
+                            <div class="compact-number">02</div>
+                            <div class="compact-content">
+                                <h4>Landing Page Aziendale</h4>
+                                <p>Design responsive per startup tech</p>
+                            </div>
+                            <div class="compact-tech">
+                                <span>React</span>
+                                <span>CSS</span>
+                                <span>API</span>
+                            </div>
+                            <a href="#" class="compact-arrow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </article>
+
+                        <article class="project-compact">
+                            <div class="compact-number">03</div>
+                            <div class="compact-content">
+                                <h4>E-commerce Platform</h4>
+                                <p>Shop online con sistema pagamenti</p>
+                            </div>
+                            <div class="compact-tech">
+                                <span>Vue</span>
+                                <span>Node</span>
+                                <span>DB</span>
+                            </div>
+                            <a href="#" class="compact-arrow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </article>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About Section - DYNAMIC LAYOUT -->
+        <section class="about" id="about">
+            <div class="container-fluid">
+                
+                <!-- Header Centered -->
+                <div class="about-header-split">
+                    <div class="about-header-content">
+                        <span class="section-label-large">Chi Sono</span>
+                        <h2 class="section-title-extreme">Sviluppatore<br><span class="title-gradient">Creativo</span></h2>
+                    </div>
+                    <div class="about-header-visual">
+                        <div class="profile-highlight">
+                            <div class="highlight-badge">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                </svg>
+                                <span>Premium Quality</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Grid -->
+                <div class="about-grid-dynamic">
+                    
+                    <!-- Main Text with Highlights -->
+                    <div class="about-text-enhanced">
+                        <div class="text-block">
+                            <h3 class="text-subtitle">Il Mio Approccio</h3>
+                            <p class="text-large">
+                                Sono uno sviluppatore web che lavora con <span class="keyword">metodo</span> e 
+                                <span class="keyword">attenzione ai dettagli</span>. Mi concentro su progetti 
+                                concreti e soluzioni efficaci che fanno la differenza.
+                            </p>
+                        </div>
+
+                        <div class="text-block">
+                            <h3 class="text-subtitle">Design & Codice</h3>
+                            <p class="text-large">
+                                Creo siti <span class="keyword">puliti</span>, <span class="keyword">funzionali</span> 
+                                e <span class="keyword">performanti</span>. Ogni elemento ha uno scopo chiaro, ogni 
+                                linea di codice è scritta con precisione.
+                            </p>
+                        </div>
+
+                        <div class="text-block">
+                            <h3 class="text-subtitle">Filosofia</h3>
+                            <p class="text-large">
+                                Il mio approccio è <span class="keyword">diretto</span>: ascolto, analizzo, sviluppo. 
+                                Preferisco la semplicità alla complessità, il funzionale allo spettacolare.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Skills Micro-Cards -->
+                    <div class="skills-micro-cards">
+                        <div class="micro-card">
+                            <div class="micro-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                </svg>
+                            </div>
+                            <div class="micro-content">
+                                <h4>Frontend Dev</h4>
+                                <p>HTML, CSS, JavaScript</p>
+                            </div>
+                            <div class="micro-glow"></div>
+                        </div>
+
+                        <div class="micro-card">
+                            <div class="micro-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                    <polyline points="21 15 16 10 5 21"></polyline>
+                                </svg>
+                            </div>
+                            <div class="micro-content">
+                                <h4>UI/UX Design</h4>
+                                <p>Interfacce moderne</p>
+                            </div>
+                            <div class="micro-glow"></div>
+                        </div>
+
+                        <div class="micro-card">
+                            <div class="micro-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                                </svg>
+                            </div>
+                            <div class="micro-content">
+                                <h4>Performance</h4>
+                                <p>Velocità ottimale</p>
+                            </div>
+                            <div class="micro-glow"></div>
+                        </div>
+
+                        <div class="micro-card">
+                            <div class="micro-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
                                     <line x1="12" y1="18" x2="12.01" y2="18"></line>
                                 </svg>
-                                Responsive
-                            </span>
+                            </div>
+                            <div class="micro-content">
+                                <h4>Responsive</h4>
+                                <p>Mobile-first approach</p>
+                            </div>
+                            <div class="micro-glow"></div>
                         </div>
-                    </div>
-                </div>
-                <!-- Project Card VoltMC -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/img/voltmc.png" alt="VoltMC Minecraft Server">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">JAVASCRIPT</span>
-                            <span class="tag">Minecraft</span>
-                        </div>
-                        <h3 class="project-title">VoltMC</h3>
-                        <p class="project-description">
-                            Server Minecraft custom italiano con features esclusive e community attiva. Sito web creato da me e <a href="https://romandev.it" target="_blank">NotRoman</a>. Ruolo: admin, gestione tecnica e sviluppo web.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://voltmc.it" target="_blank" class="project-link">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                    <polyline points="15 3 21 3 21 9"></polyline>
-                                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                                </svg>
-                                Sito 
-                            </a>
-                        </div>
-                        <div class="project-meta">
-                            <span class="meta-item">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                                    <polyline points="21 15 16 10 5 21"></polyline>
-                                </svg>
-                                UI/UX
-                            </span>
-                            <span class="meta-item">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <path d="M12 6v6l4 2"></path>
-                                </svg>
-                                Admin
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Card MineClub -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/img/MineClub.png" alt="MineClub Minecraft Server">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">Minecraft</span>
-                        </div>
-                        <h3 class="project-title">MineClub</h3>
-                        <p class="project-description">
-                            Ex Owner-Dev: sviluppo, estetico e gestione tecnica. Max player 500. Licenziato per mancanza attività. i nuovi developer hanno rovinato l'estetica. Community italiana, ora gestita da altri staff.
-                        </p>
-                        <div class="project-links">
-                            <a href="https://minecraft-italia.net/lista/server/mineclub" target="_blank" class="project-link">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                    <polyline points="15 3 21 3 21 9"></polyline>
-                                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                                </svg>
-                                Sito
-                            </a>
-                        </div>
-                        <div class="project-meta">
-                            <span class="meta-item">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                                    <polyline points="21 15 16 10 5 21"></polyline>
-                                </svg>
-                                UI/UX
-                            </span>
-                            <span class="meta-item">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <path d="M12 6v6l4 2"></path>
-                                </svg>
-                                Ex Owner Dev
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="section-container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <span class="section-label">Contattami</span>
-                    <h2 class="contact-title">Hai un progetto in mente?</h2>
-                    <p class="contact-text">Sono disponibile per collaborazioni. Mandami un messaggio e ti risponderò al più presto!</p>
-                    
-                    <div class="contact-details">
-                        <div class="detail-item">
-                            <svg class="detail-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <div>
-                                <h4>Email</h4>
-                                <a href="#" class="copy-email" data-email="info@notadev.it" onclick="copyEmail(event)">info@notadev.it</a>
+                        <div class="micro-card">
+                            <div class="micro-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
                             </div>
+                            <div class="micro-content">
+                                <h4>Best Practices</h4>
+                                <p>Codice pulito e sicuro</p>
+                            </div>
+                            <div class="micro-glow"></div>
                         </div>
-                        <div class="detail-item">
-                            <svg class="detail-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                            </svg>
-                            <div>
-                                <h4>GitHub</h4>
-                                <a href="https://github.com/nootalive" target="_blank">@nootalive</a>
+
+                        <div class="micro-card">
+                            <div class="micro-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
                             </div>
-                        </div>
-                        <div class="detail-item">
-                            <svg class="detail-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 2L11 13"></path>
-                                <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
-                            </svg>
-                            <div>
-                                <h4>Telegram</h4>
-                                <a href="https://t.me/n0t4liv3" target="_blank">@n0t4liv3</a>
+                            <div class="micro-content">
+                                <h4>Consegna Rapida</h4>
+                                <p>Tempi rispettati</p>
                             </div>
+                            <div class="micro-glow"></div>
                         </div>
                     </div>
-                    
-                    <div class="social-section">
-                        <h4>Seguimi sui Social</h4>
-                        <div class="social-links">
-                            <a href="#" class="social-link" title="GitHub">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                            </a>
-                            <a href="#" class="social-link" title="Telegram">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 2L11 13"></path>
-                                    <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
-                                </svg>
-                            </a>
+
+                </div>
+
+                <!-- Stats Premium -->
+                <div class="stats-premium-grid">
+                    <div class="stat-premium">
+                        <div class="stat-icon-wrapper">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
                         </div>
+                        <div class="stat-number-large">2+</div>
+                        <div class="stat-text-large">Anni di Esperienza</div>
+                        <div class="stat-description">Nel settore web development</div>
+                    </div>
+
+                    <div class="stat-premium featured-stat">
+                        <div class="stat-icon-wrapper">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <div class="stat-number-large">10+</div>
+                        <div class="stat-text-large">Progetti Completati</div>
+                        <div class="stat-description">Con successo e soddisfazione</div>
+                        <div class="featured-badge-stat">Top Performance</div>
+                    </div>
+
+                    <div class="stat-premium">
+                        <div class="stat-icon-wrapper">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div class="stat-number-large">100%</div>
+                        <div class="stat-text-large">Clienti Soddisfatti</div>
+                        <div class="stat-description">Feedback positivo garantito</div>
                     </div>
                 </div>
-                
-                <div class="contact-cta-wrapper">
-                    <div class="cta-card">
-                        <h3>Iniziamo a collaborare</h3>
-                        <p>Contattami direttamente tramite i canali che preferisci. Sono sempre disponibile per discutere nuovi progetti e opportunità di collaborazione.</p>
-                        <div class="cta-buttons">
-                            <button class="btn btn-primary" onclick="copyEmail(event)" data-email="info@notadev.it">
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <div class="section-header">
+                            <span class="section-label">Contatti</span>
+                            <h2 class="section-title">Hai un progetto<br>in mente?</h2>
+                        </div>
+                        <p class="contact-description">
+                            Sono disponibile per nuovi progetti e collaborazioni. 
+                            Contattami e discutiamo di come posso aiutarti.
+                        </p>
+
+                        <!-- Contact Methods -->
+                        <div class="contact-methods">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:info@notadev.it" class="contact-value">info@notadev.it</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 2L11 13"></path>
+                                        <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+                                    </svg>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">Telegram</span>
+                                    <a href="https://t.me/n0t4liv3" target="_blank" class="contact-value">@n0t4liv3</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                </div>
+                                <div class="contact-details">
+                                    <span class="contact-label">GitHub</span>
+                                    <a href="https://github.com/nootalive" target="_blank" class="contact-value">@nootalive</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" action="#" method="post">
+                            <div class="form-group">
+                                <label for="name">Nome</label>
+                                <input type="text" id="name" name="name" placeholder="Il tuo nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="tua@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Messaggio</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Parlami del tuo progetto..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">
+                                Invia Messaggio
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                                 </svg>
-                                Copia Email
                             </button>
-                            <a href="https://t.me/gianmarcobrusca" target="_blank" class="btn btn-secondary">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 2L11 13"></path>
-                                    <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
-                                </svg>
-                                Scrivi su Telegram
-                            </a>
-                        </div>
-                        <div class="cta-stats">
-                            <div class="stat-item">
-                                <div class="stat-number">48h</div>
-                                <div class="stat-label">Tempo di risposta</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">100%</div>
-                                <div class="stat-label">Progetti completati</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">2+</div>
-                                <div class="stat-label">Anni di esperienza</div>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
+    <footer class="site-footer">
+        <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <p>notadev.it</p>
-                    <p>Web developer creativo con la passione per design ed esperienza utente. Creo soluzioni digitali intuitive che combinano estetica e funzionalità.</p>
+                    <h3>notadev</h3>
+                    <p>Web Developer specializzato in design moderno e codice pulito.</p>
                 </div>
-                
                 <div class="footer-links">
-                    <h4>Navigazione</h4>
-                    <ul>
-                        <li><a href="#hero">Home</a></li>
-                        <li><a href="#about">Chi Sono</a></li>
-                        <li><a href="#projects">Progetti</a></li>
-                        <li><a href="#contact">Contatti</a></li>
-                    </ul>
+                    <a href="#hero">Home</a>
+                    <a href="#projects">Progetti</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contatti</a>
                 </div>
-                
-                <div class="footer-contact">
-                    <h4>Contatti</h4>
-                    <p><strong>Email:</strong> <a href="mailto:info@notadev.it">info@notadev.it</a></p>
-                    <p><strong>Posizione:</strong> Italia</p>
+                <div class="footer-social">
+                    <a href="https://github.com/nootalive" target="_blank" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="https://t.me/n0t4liv3" target="_blank" aria-label="Telegram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2L11 13"></path>
+                            <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+                        </svg>
+                    </a>
                 </div>
             </div>
-               <!-- Floating Tech Icons -->
-    <div class="floating-icon floating-html">
-      <svg width="38" height="38" viewBox="0 0 32 32" fill="none"><path fill="#E44D26" d="M5.902 28.286L3.09 3.714h25.82l-2.813 24.57L16 30.286z"/><path fill="#F16529" d="M16 28.857l7.09-1.97 2.406-21.47H16z"/><path fill="#EBEBEB" d="M16 13.143h-3.56l-.25-2.857H16V7.571H8.857l.07.786.72 8.07H16v-3.284zm0 7.286l-.012.003-2.98-.805-.19-2.13h-2.82l.375 4.21 5.615 1.56.012-.003v-2.835z"/><path fill="#FFF" d="M16 13.143v2.715h3.23l-.305 3.428H16v2.835l5.61-1.56.04-.45.64-7.16.07-.786H16zm0-5.572v2.715h6.01l.06-.672.13-1.43.07-.613z"/></svg>
-    </div>
-    <div class="floating-icon floating-css">
-      <svg width="38" height="38" viewBox="0 0 32 32" fill="none"><path fill="#1572B6" d="M5.902 28.286L3.09 3.714h25.82l-2.813 24.57L16 30.286z"/><path fill="#33A9DC" d="M16 28.857l7.09-1.97 2.406-21.47H16z"/><path fill="#fff" d="M16 13.143h-3.56l-.25-2.857H16V7.571H8.857l.07.786.72 8.07H16v-3.284zm0 7.286l-.012.003-2.98-.805-.19-2.13h-2.82l.375 4.21 5.615 1.56.012-.003v-2.835z"/><path fill="#EBEBEB" d="M16 13.143v2.715h3.23l-.305 3.428H16v2.835l5.61-1.56.04-.45.64-7.16.07-.786H16zm0-5.572v2.715h6.01l.06-.672.13-1.43.07-.613z"/></svg>
-    </div>
-    <div class="floating-icon floating-js">
-      <svg width="38" height="38" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="6" fill="#F7DF1E"/><path d="M20.5 23.5c.5.8 1.1 1.5 2.3 1.5 1.1 0 1.8-.5 1.8-1.2 0-.8-.7-1.1-2-1.6l-.7-.3c-2-.7-3.3-1.5-3.3-3.3 0-1.6 1.2-2.8 3.1-2.8 1.3 0 2.2.4 2.8 1.6l-1.5 1c-.3-.6-.7-.8-1.3-.8-.6 0-1 .4-1 .8 0 .6.4.8 1.5 1.2l.7.3c2.2.8 3.5 1.6 3.5 3.4 0 2-1.6 2.9-3.7 2.9-2.1 0-3.3-1-3.9-2.2l1.6-1zm-7.2.2c.3.6.6 1.1 1.3 1.1.7 0 1.1-.3 1.1-1.4v-6.1h2.1v6.2c0 2.2-1.3 3.2-3.1 3.2-1.7 0-2.7-.9-3.2-2l1.8-1z" fill="#222"/></svg>
-    </div>
-
-    <script src="js/script.js"></script>
-</body>
-</html>
             <div class="footer-bottom">
-                <p>© 2025 notadev | Web Developer. Tutti i diritti riservati.</p>
+                <p>© 2025 notadev. Tutti i diritti riservati.</p>
             </div>
         </div>
     </footer>
 
-
-
+    <script src="js/script.js"></script>
+</body>
+</html>

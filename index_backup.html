@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notadev — Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#hero" class="nav-logo">notadev</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">Chi Sono</a></li>
+                <li><a href="#projects" class="nav-link">Progetti</a></li>
+                <li><a href="#contact" class="nav-link">Contatti</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-label">Web Developer</span>
+                <h1 class="hero-title">Creo esperienze<br>digitali <span class="accent">moderne</span></h1>
+                <p class="hero-description">Design pulito, codice solido. Trasformo idee in soluzioni web eleganti e funzionali.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">Vedi i Progetti</a>
+                    <a href="#contact" class="btn btn-outline">Contattami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Chi Sono</span>
+                <h2 class="section-title">Sviluppatore con focus su design e qualità</h2>
+            </div>
+            
+            <div class="about-content">
+                <p class="about-text">Sono uno sviluppatore web che lavora con metodo e attenzione. Ho costruito la mia esperienza nel tempo, concentrandomi su progetti concreti e soluzioni efficaci.</p>
+                
+                <p class="about-text">Creo siti puliti e funzionali. Mi interessa che ogni elemento abbia uno scopo chiaro e che l'esperienza dell'utente sia fluida. Lavoro con HTML, CSS e JavaScript, usando strumenti moderni per garantire risultati solidi.</p>
+                
+                <p class="about-text">Preferisco la semplicità: codice ordinato, design essenziale, comunicazione diretta. Ogni progetto parte dall'ascolto e si sviluppa con precisione.</p>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">Anni Esperienza</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Progetti Completati</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Clienti Soddisfatti</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Progetti Selezionati</h2>
+            </div>
+            
+            <div class="projects-grid">
+                
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/logo-kilo.jpeg" alt="Casa Kilo">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">Casa Kilo</h3>
+                        <p class="project-description">Piattaforma web moderna per casa vacanze. Design minimal con focus sulla semplicità, sistema di prenotazione intuitivo e presentazione efficace degli spazi.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <a href="https://casakilo.it" target="_blank" class="project-link">
+                            Visita il Sito →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/voltmc.png" alt="VoltMC">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">VoltMC</h3>
+                        <p class="project-description">Server Minecraft custom italiano con features esclusive e community attiva. Sito web e gestione tecnica completa del progetto.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Minecraft</span>
+                        </div>
+                        <a href="https://voltmc.it" target="_blank" class="project-link">
+                            Visita il Sito →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/img/MineClub.png" alt="MineClub">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-name">MineClub</h3>
+                        <p class="project-description">Ex Owner-Developer: sviluppo completo, design e gestione tecnica. Server che ha raggiunto i 500 giocatori simultanei con community italiana attiva.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Minecraft</span>
+                        </div>
+                        <a href="https://minecraft-italia.net/lista/server/mineclub" target="_blank" class="project-link">
+                            Info Progetto →
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="section-header">
+                    <span class="section-label">Contatti</span>
+                    <h2 class="section-title">Hai un progetto in mente?</h2>
+                    <p class="contact-subtitle">Sono disponibile per collaborazioni. Contattami e discutiamo della tua idea.</p>
+                </div>
+                
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:info@notadev.it" class="contact-value">info@notadev.it</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13"></path>
+                                <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telegram</h4>
+                            <a href="https://t.me/n0t4liv3" target="_blank" class="contact-value">@n0t4liv3</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/nootalive" target="_blank" class="contact-value">@nootalive</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>notadev</h3>
+                    <p>Web Developer specializzato in design moderno e codice pulito.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero">Home</a>
+                    <a href="#about">Chi Sono</a>
+                    <a href="#projects">Progetti</a>
+                    <a href="#contact">Contatti</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 notadev. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
