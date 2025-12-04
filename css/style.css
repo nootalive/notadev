@@ -473,12 +473,12 @@ a {
 /* Hero Visual Cards */
 .hero-visual {
     position: relative;
-    height: 600px;
+    height: 550px;
 }
 
 .visual-card {
     position: absolute;
-    width: 280px;
+    width: 240px;
     background: var(--color-bg-elevated);
     border: 2px solid var(--color-border-light);
     border-radius: var(--radius-lg);
@@ -494,21 +494,22 @@ a {
 }
 
 .card-1 {
-    top: 20px;
-    left: 10;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 3;
 }
 
 .card-2 {
     top: 50%;
-    right: -40px;
+    left: -120px;
     transform: translateY(-50%);
     z-index: 2;
 }
 
 .card-3 {
-    bottom: -70px;
-    left: 20%;
+    bottom: -80px;
+    left: 50%;
     transform: translateX(-50%);
     z-index: 1;
 }
